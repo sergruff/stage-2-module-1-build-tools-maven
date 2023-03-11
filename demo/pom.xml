@@ -23,4 +23,11 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+    <repositories>
+        <repository>
+            <id>localrep</id>
+            <name>local repository</name>
+            <url>file:${project.basedir}</url>
+        </repository>
+    </repositories>
 </project>
