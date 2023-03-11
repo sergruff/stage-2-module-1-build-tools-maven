@@ -12,16 +12,12 @@
         <module>utils</module>
         <module>demo</module>
     </modules>
-
-    <properties>
-        <junit.version>5.8.1</junit.version>
-    </properties>
     <dependencyManagement>
         <dependencies>
             <dependency>
                 <groupId>org.junit.jupiter</groupId>
                 <artifactId>junit-jupiter-params</artifactId>
-                <version>${junit.version}</version>
+                <version>5.8.2</version>
                 <scope>test</scope>
             </dependency>
             <dependency>
@@ -32,6 +28,10 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+    </properties>
     <build>
         <plugins>
             <plugin>
