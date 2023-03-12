@@ -1,8 +1,6 @@
 package com.epam.utils;
 
 import java.lang.*;
-import java.math.BigDecimal;
-import java.util.Map;
 
 public class StringUtils {
     public static boolean isPositiveNumber(String str) {
