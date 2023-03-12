@@ -1,19 +1,14 @@
 package com.epam.utils;
 
-import java.lang.*;
+import static org.apache.commons.lang3.math.NumberUtils.isCreatable;
 
 public class StringUtils {
     public static boolean isPositiveNumber(String str) {
-        if (str==null) {
-            return false;
-        }
-        try {
-            return (Math.round(Double.parseDouble(str)*1000)/1000) >0;
-        }
-        catch (NumberFormatException e){
+        if (!isCreatable(str)) {
             return false;
         }
 
+        return !str.contains("-") && !str.equals("0") && !str.trim().equals("");
 
     }
 }
