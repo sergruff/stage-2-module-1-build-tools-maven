@@ -1,13 +1,16 @@
 package com.epam.utils;
 
 import java.lang.*;
+import java.math.BigDecimal;
+import java.util.Map;
+
 public class StringUtils {
     public static boolean isPositiveNumber(String str) {
         if (str==null) {
             return false;
         }
         try {
-            return Double.parseDouble(str)>0;
+            return (Math.round(Double.parseDouble(str)*1000)/1000) >0;
         }
         catch (NumberFormatException e){
             return false;
